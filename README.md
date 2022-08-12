@@ -1,4 +1,4 @@
-![alt text](file:///C:/Users/3t/Pictures/flappy_dot.PNG "flappy_dot")
+![flappy_dot](https://user-images.githubusercontent.com/104235709/184432912-c4e8f987-89ff-4fe0-ad8f-76c9b531b00a.PNG)
 
 # Getting Started with Create React App
 
