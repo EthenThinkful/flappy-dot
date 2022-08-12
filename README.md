@@ -1,4 +1,4 @@
-![alt text](file:///C:/Users/3t/Pictures/flappy_dot.PNG)
+![alt text](file:///C:/Users/3t/Pictures/flappy_dot.PNG "flappy_dot")
 
 # Getting Started with Create React App
 
