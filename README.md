@@ -1,3 +1,5 @@
+![alt text](file:///C:/Users/3t/Pictures/flappy_dot.PNG)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
