@@ -2,7 +2,8 @@ import "./App.css";
 import styled from "styled-components";
 import { useEffect, useState } from "react";
 
-const BIRD_SIZE = 20;
+
+const BIRD_SIZE = 50;
 const GAME_WIDTH = 500;
 const GAME_HEIGHT = 500;
 const GRAVITY = 6;
@@ -10,12 +11,14 @@ const JUMP_HEIGHT = 100;
 const OBSTACLE_WIDTH = 40;
 const OBSTACLE_GAP = 200;
 
+
+
 function App() {
   const [birdPosition, setBirdPosition] = useState(250);
   const [gameHasStarted, setGameHasStarted] = useState(false);
   const [obstacleHeight, setObstacleHeight] = useState(200);
   const [obstacleLeft, setObstacleLeft] = useState(GAME_WIDTH - OBSTACLE_WIDTH);
-  const [score, setScore] = useState(0);
+  const [score, setScore] = useState(-2);
 
   const bottomObstacleHeight = GAME_HEIGHT - OBSTACLE_GAP - obstacleHeight;
 
@@ -101,13 +104,12 @@ function App() {
 
 export default App;
 
-const Bird = styled.div`
+const Bird = styled.video`
   position: absolute;
-  background-color: turquoise;
-  height: ${(props) => props.size}px;
+  background-image: url(https://user-images.githubusercontent.com/104235709/184509080-f2b48a52-a2d2-4f9d-ae0e-1c32e1dd2e7b.gif);
   width: ${(props) => props.size}px;
+  height: ${(props) => props.size}px;
   top: ${(props) => props.top}px;
-  border-radius: 50%;
 `;
 
 const Div = styled.div`
@@ -115,8 +117,9 @@ const Div = styled.div`
   width: 100%;
   justify-content: center;
   & span {
-    color: black;
-    font-size: 24px;
+    font-family: Fantasy;
+    color: white;
+    font-size: 40px;
     position: absolute;
   }
 `;
@@ -124,7 +127,7 @@ const Div = styled.div`
 const GameBox = styled.div`
   height: ${(props) => props.height}px;
   width: ${(props) => props.width}px;
-  background-color: yellow;
+  background-image: url(https://user-images.githubusercontent.com/104235709/184452532-ef2e9847-73af-437c-aae5-c082237d7092.jpg);
   overflow: hidden;
 `;
 
