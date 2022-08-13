@@ -1,4 +1,4 @@
-![flappy_dot](https://user-images.githubusercontent.com/104235709/184432912-c4e8f987-89ff-4fe0-ad8f-76c9b531b00a.PNG)
+![flappy_dot](https://user-images.githubusercontent.com/104235709/184510152-5df5712f-fd0a-4e45-94ac-21203b8e34e8.PNG)
 
 # Getting Started with Create React App
 
