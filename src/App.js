@@ -2,23 +2,20 @@ import "./App.css";
 import styled from "styled-components";
 import { useEffect, useState } from "react";
 
-
-const BIRD_SIZE = 50;
+const BIRD_SIZE = 25;
 const GAME_WIDTH = 500;
 const GAME_HEIGHT = 500;
-const GRAVITY = 6;
-const JUMP_HEIGHT = 100;
+const GRAVITY = 8;
+const JUMP_HEIGHT = 90;
 const OBSTACLE_WIDTH = 40;
-const OBSTACLE_GAP = 200;
-
-
+const OBSTACLE_GAP = 125;
 
 function App() {
   const [birdPosition, setBirdPosition] = useState(250);
   const [gameHasStarted, setGameHasStarted] = useState(false);
   const [obstacleHeight, setObstacleHeight] = useState(200);
   const [obstacleLeft, setObstacleLeft] = useState(GAME_WIDTH - OBSTACLE_WIDTH);
-  const [score, setScore] = useState(-2);
+  const [score, setScore] = useState(0);
 
   const bottomObstacleHeight = GAME_HEIGHT - OBSTACLE_GAP - obstacleHeight;
 
@@ -39,7 +36,7 @@ function App() {
     let obstacleId;
     if (gameHasStarted && obstacleLeft >= -OBSTACLE_WIDTH) {
       obstacleId = setInterval(() => {
-        setObstacleLeft((obstacleLeft) => obstacleLeft - 5);
+        setObstacleLeft((obstacleLeft) => obstacleLeft - 8);
       }, 24);
 
       return () => {
@@ -66,6 +63,7 @@ function App() {
       (hasCollidedWithTopObstacle || hasCollidedWithBottomObstacle)
     ) {
       setGameHasStarted(false);
+      
     }
   }, [birdPosition, obstacleHeight, bottomObstacleHeight, obstacleLeft]);
 
@@ -73,6 +71,8 @@ function App() {
     let newBirdPosition = birdPosition - JUMP_HEIGHT;
     if (!gameHasStarted) {
       setGameHasStarted(true);
+      setScore(0);
+      setBirdPosition(250);
     } else if (newBirdPosition < 0) {
       setBirdPosition(0);
     } else {
@@ -104,12 +104,13 @@ function App() {
 
 export default App;
 
-const Bird = styled.video`
+const Bird = styled.div`
   position: absolute;
-  background-image: url(https://user-images.githubusercontent.com/104235709/184509080-f2b48a52-a2d2-4f9d-ae0e-1c32e1dd2e7b.gif);
+  background-color: yellow;
   width: ${(props) => props.size}px;
   height: ${(props) => props.size}px;
   top: ${(props) => props.top}px;
+  border-radius: 50%;
 `;
 
 const Div = styled.div`
@@ -119,7 +120,7 @@ const Div = styled.div`
   & span {
     font-family: Fantasy;
     color: white;
-    font-size: 40px;
+    font-size: 30px;
     position: absolute;
   }
 `;
