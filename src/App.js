@@ -5,10 +5,10 @@ import { useEffect, useState } from "react";
 const BIRD_SIZE = 25;
 const GAME_WIDTH = 500;
 const GAME_HEIGHT = 500;
-const GRAVITY = 8;
-const JUMP_HEIGHT = 90;
+const GRAVITY = 6;
+const JUMP_HEIGHT = 95;
 const OBSTACLE_WIDTH = 40;
-const OBSTACLE_GAP = 125;
+const OBSTACLE_GAP = 130;
 
 function App() {
   const [birdPosition, setBirdPosition] = useState(250);
