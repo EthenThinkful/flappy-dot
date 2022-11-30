@@ -118,7 +118,7 @@ const Div = styled.div`
   width: 100%;
   justify-content: center;
   & span {
-    font-family: Fantasy;
+    font-family: Roboto Mono Regular;
     color: white;
     font-size: 30px;
     position: absolute;
@@ -140,3 +140,5 @@ const Obstacle = styled.div`
   height: ${(props) => props.height}px;
   left: ${(props) => props.left}px;
 `;
+
+
