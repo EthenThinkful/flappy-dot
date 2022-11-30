@@ -120,7 +120,7 @@ const Div = styled.div`
   & span {
     font-family: Roboto Mono Regular;
     color: white;
-    font-size: 30px;
+    font-size: 35px;
     position: absolute;
   }
 `;
