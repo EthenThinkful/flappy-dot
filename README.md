@@ -1,3 +1,5 @@
+An attempt at creating some basic game functionality with React! (Just for fun)
+
 ![flappy_dot](https://user-images.githubusercontent.com/104235709/195247672-0c6120f8-cbc3-4bfc-9601-8eec6764079c.PNG)
 
 # Getting Started with Create React App
